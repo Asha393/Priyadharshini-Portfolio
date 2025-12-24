@@ -3,81 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Priyadharshini K | Cloud & ECE Portfolio</title>
+  <title>Priyadharshini K | UI/UX & Cloud Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      color: #333;
-      background: #f9fafb;
+    :root{
+      --primary:#6366f1;
+      --dark:#0f172a;
+      --light:#f8fafc;
+      --gray:#64748b;
     }
-    header {
-      background: #0f172a;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:var(--light);
+      color:var(--dark);
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
+    header{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:80px 20px;
+      background:linear-gradient(135deg,var(--primary),#4f46e5);
+      color:white;
     }
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #cbd5f5;
+    header h1{font-size:2.8rem;margin:0}
+    header p{max-width:600px;margin-top:15px;font-size:1.1rem}
+    nav{
+      position:sticky;
+      top:0;
+      background:white;
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      padding:15px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      z-index:10;
     }
-    nav {
-      background: #1e293b;
-      padding: 10px;
-      text-align: center;
+    nav a{
+      text-decoration:none;
+      color:var(--dark);
+      font-weight:500;
     }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    nav a:hover{color:var(--primary)}
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:70px 20px;
     }
-    nav a:hover {
-      text-decoration: underline;
+    h2{
+      font-size:2rem;
+      margin-bottom:30px;
+      text-align:center;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
     }
-    h2 {
-      color: #0f172a;
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 5px;
+    .card{
+      background:white;
+      border-radius:18px;
+      padding:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+      transition:transform .3s, box-shadow .3s;
     }
-    .card {
-      background: #fff;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.12);
     }
-    ul {
-      padding-left: 20px;
+    .card h3{margin-top:0}
+    .tag{
+      display:inline-block;
+      background:var(--primary);
+      color:white;
+      padding:4px 10px;
+      border-radius:20px;
+      font-size:.75rem;
+      margin-bottom:10px;
     }
-    footer {
-      background: #0f172a;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+    footer{
+      background:var(--dark);
+      color:white;
+      text-align:center;
+      padding:30px 20px;
     }
-    .contact a {
-      color: #2563eb;
-      text-decoration: none;
-    }
+    footer a{color:#c7d2fe;text-decoration:none}
   </style>
 </head>
 <body>
 
 <header>
   <h1>Priyadharshini K</h1>
-  <p>ECE Graduate | AWS Cloud Practitioner | IoT & Cloud Enthusiast</p>
+  <p>ECE Graduate • AWS Cloud Practitioner • UI/UX Focused Digital Portfolio</p>
 </header>
 
 <nav>
@@ -90,86 +110,70 @@
 
 <section id="about">
   <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am a motivated Electronics and Communication Engineering graduate with strong interest in
-      cloud computing and technology-driven solutions. I hold an AWS Cloud Practitioner certification
-      and have hands-on experience through academic and cloud-based projects. I am seeking an
-      entry-level role where I can apply my skills and grow professionally.
-    </p>
+  <div class="grid">
+    <div class="card">
+      <p>
+        I am an Electronics and Communication Engineering graduate with a strong interest in cloud computing and user‑centered digital solutions. I enjoy designing clean, simple interfaces and combining technical knowledge with UI/UX principles.
+      </p>
+    </div>
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
-  <div class="card">
-    <h3>Cloud & Tools</h3>
-    <ul>
-      <li>AWS (EC2, S3, IAM, CloudWatch)</li>
-      <li>AWS Management Console</li>
-    </ul>
-    <h3>Programming & Databases</h3>
-    <ul>
-      <li>Python (Basics)</li>
-      <li>SQL (Basic queries)</li>
-    </ul>
-    <h3>Embedded & IoT</h3>
-    <ul>
-      <li>Arduino / ESP32</li>
-      <li>Arduino IoT Cloud</li>
-      <li>Proteus</li>
-    </ul>
+  <div class="grid">
+    <div class="card"><span class="tag">Cloud</span><h3>AWS</h3><p>EC2, S3, IAM, CloudWatch, Cost Optimization</p></div>
+    <div class="card"><span class="tag">Programming</span><h3>Python & SQL</h3><p>Basics, queries, data handling</p></div>
+    <div class="card"><span class="tag">IoT</span><h3>Embedded</h3><p>Arduino, ESP32, Proteus, IoT Cloud</p></div>
   </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-
-  <div class="card">
-    <h3>AWS CloudWatch Metrics Monitoring</h3>
-    <p><strong>Objective:</strong> Monitor and analyze AWS resources to ensure performance and availability.</p>
-    <ul>
-      <li>Configured CloudWatch metrics for EC2 CPU, disk I/O, and network traffic</li>
-      <li>Created custom CloudWatch dashboards for real-time monitoring</li>
-      <li>Set up alarms for high CPU and resource thresholds</li>
-      <li>Used PuTTY to access EC2 instances and validate metrics</li>
-      <li>Optimized resource utilization to reduce AWS costs</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Anti-Sleep Alarm with Vehicle Load Monitoring</h3>
-    <ul>
-      <li>Drowsiness detection using eye-blink analysis</li>
-      <li>Alcohol detection using MQ sensor</li>
-      <li>Collision avoidance using ultrasonic sensor</li>
-      <li>Load monitoring using HX711 load cell</li>
-      <li>GSM-based SMS alerts for safety events</li>
-    </ul>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">AWS</span>
+      <h3>CloudWatch Metrics Monitoring</h3>
+      <p>Designed dashboards and alarms to monitor EC2 performance and ensure application reliability.</p>
+      <ul>
+        <li>Monitored CPU, disk I/O, network traffic</li>
+        <li>Configured alarms for threshold alerts</li>
+        <li>Optimized resources to reduce costs</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">ECE</span>
+      <h3>Anti‑Sleep Alarm System</h3>
+      <p>Multi‑sensor vehicle safety system with real‑time alerts.</p>
+      <ul>
+        <li>Drowsiness & alcohol detection</li>
+        <li>Collision & load monitoring</li>
+        <li>GSM‑based alert system</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section id="certifications">
   <h2>Certifications</h2>
-  <div class="card">
-    <ul>
-      <li>AWS re/Start Cloud Practitioner – Cultus Technology Services</li>
-      <li>NPTEL – Computer Networks and Internet Protocols</li>
-    </ul>
+  <div class="grid">
+    <div class="card"><h3>AWS Cloud Practitioner</h3><p>Cultus / Nan Mudhalvan</p></div>
+    <div class="card"><h3>NPTEL</h3><p>Computer Networks & Internet Protocol</p></div>
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact">
   <h2>Contact</h2>
-  <div class="card">
-    <p>Email: <a href="mailto:darshiniasha1911@gmail.com">darshiniasha1911@gmail.com</a></p>
-    <p>Phone: 7092295275</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/priyadharshini-k-592a8430b" target="_blank">View Profile</a></p>
+  <div class="grid">
+    <div class="card">
+      <p>Email: <a href="mailto:darshiniasha1911@gmail.com">darshiniasha1911@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/priyadharshini-k-592a8430b" target="_blank">View Profile</a></p>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Priyadharshini K | Digital Portfolio</p>
+  <p>© 2025 Priyadharshini K • Designed with UI/UX principles</p>
 </footer>
 
 </body>
